@@ -1,6 +1,21 @@
 body {
+  margin: 0;
+  padding: 0;
   color: #020202;
-  background-color: #f2f2f2;
+  background-color: #ede8e6;
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    100% 100%,
+    color-stop(0.25, #f9f9f9),
+    color-stop(0.25, transparent),
+    color-stop(0.5, transparent),
+    color-stop(0.5, #f9f9f9),
+    color-stop(0.75, #f9f9f9),
+    color-stop(0.75, transparent),
+    to(transparent)
+  );
+  -webkit-background-size: 7px 7px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1vh;
@@ -12,6 +27,16 @@ header {
   box-sizing: border-box;
   padding-top: 28em;
   margin-bottom: 0;
+  background-image: -webkit-gradient(
+      linear,
+      0 0,
+      0 100%,
+      color-stop(0.5, transparent),
+      color-stop(0.5, #ffffff),
+      to(#ede8e6)
+    ),
+    -webkit-gradient(linear, 0 0, 100% 0, color-stop(0.5, transparent), color-stop(0.5, #ffffff), to(#ede8e6));
+  -webkit-background-size: 5px 5px;
 }
 header .logo {
   height: 16vmin;
@@ -23,8 +48,11 @@ header .bottom-space {
 header .bottom-space svg {
   width: 3em;
   height: 3em;
+  transition: 0.15s;
 }
-
+header .bottom-space svg:hover {
+  margin-top: 0.5em;
+}
 .name {
   user-select: none;
   margin-top: -1em;
@@ -33,7 +61,6 @@ header .bottom-space svg {
 }
 
 .name .en-name {
-  margin: 0;
   font-size: 2em;
 }
 
@@ -43,7 +70,9 @@ header .bottom-space svg {
 }
 
 .link {
-  height: 5em;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
 }
 
 .link ul {
@@ -56,9 +85,10 @@ header .bottom-space svg {
 }
 
 .link ul li {
+  height: 6em;
   display: inline-block;
+  vertical-align: middle;
   margin-left: 0;
-  margin-right: 2em;
 }
 
 .link ul li img {
@@ -66,6 +96,7 @@ header .bottom-space svg {
   height: 5em;
   user-select: none;
   transition: 0.2s;
+  margin-right: 3em;
 }
 .link ul li img:hover {
   width: 6em;
@@ -105,7 +136,7 @@ section {
 
 .content h2 {
   font-size: 3em;
-  border-bottom: 1px solid #020202;
+  border-bottom: 1px solid #0f0f0f;
 }
 .content p {
   font-size: 2em;
@@ -122,7 +153,8 @@ footer {
   width: 95vmin;
   margin: 0 auto;
   margin-top: 3vh;
-  border-top: #8f8f8f solid 1px;
+  border-top: #dfdfdf double 2px;
   font-size: 1.5em;
   text-align: center;
+  user-select: none;
 }
