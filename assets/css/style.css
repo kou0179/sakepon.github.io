@@ -31,7 +31,7 @@ header .logo {
 }
 
 .link {
-  height: 48px;
+  height: 5em;
 }
 
 .link ul li {
@@ -40,14 +40,14 @@ header .logo {
 }
 
 .link ul li img {
-  width: 48px;
-  height: 48px;
+  width: 5em;
+  height: 5em;
   user-select: none;
   transition: 0.2s;
 }
 .link ul li img:hover {
-  width: 64px;
-  height: 64px;
+  width: 6em;
+  height: 6em;
 }
 
 .contents {
