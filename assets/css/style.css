@@ -3,6 +3,7 @@ body {
   background-color: #f2f2f2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1vh;
 }
 header {
   margin: 5vmin;
@@ -21,12 +22,12 @@ header .logo {
 
 .name .en-name {
   margin: 0;
-  font-size: 18px;
+  font-size: 2em;
 }
 
 .name .jp-name {
   margin: 0;
-  font-size: 32px;
+  font-size: 3.2em;
 }
 
 .link {
@@ -81,8 +82,14 @@ section {
 }
 
 .content h2 {
-  font-size: 20px;
+  font-size: 3em;
   border-bottom: 1px solid #020202;
+}
+.content p {
+  font-size: 2em;
+}
+.content ul li {
+  font-size: 2em;
 }
 
 #mail-address a {
@@ -94,6 +101,6 @@ footer {
   margin: 0 auto;
   margin-top: 3vh;
   border-top: #8f8f8f solid 1px;
-  font-size: small;
+  font-size: 1.5em;
   text-align: center;
 }
