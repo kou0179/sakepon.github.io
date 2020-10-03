@@ -8,18 +8,27 @@ body {
     "Meiryo", "verdana", sans-serif;
 }
 header {
-  margin: 5vmin;
   text-align: center;
   box-sizing: border-box;
+  padding-top: 32em;
+  margin-bottom: 0;
 }
 header .logo {
   height: 16vmin;
 }
+header .bottom-space {
+  height: 39em;
+  padding-top: 12em;
+}
+header .bottom-space svg {
+  width: 3em;
+  height: 3em;
+}
 
 .name {
-  font-family: sans-serif;
   user-select: none;
   margin-top: -1em;
+  /* margin-left: -1.6em; */
 }
 
 .name .en-name {
@@ -36,8 +45,18 @@ header .logo {
   height: 5em;
 }
 
+.link ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+  padding-left: 2em;
+}
+
 .link ul li {
   display: inline-block;
+  margin-left: 0;
   margin-right: 2em;
 }
 
