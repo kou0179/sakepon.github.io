@@ -4,10 +4,21 @@ console.log(
   ""
 );
 
+const GoToFirstContent = () => {
+  // not working in safari
+  // window.scroll({
+  //   top: targetTop,
+  //   behavior: "smooth",
+  // });
+  let scroll = new SmoothScroll();
+  let anchor = document.querySelector("#first-content");
+  scroll.animateScroll(anchor);
+};
+
 let scrollFired = false;
 window.addEventListener("scroll", (ev) => {
-  var scrollTop = window.scrollY;
-  var scrollBtm = scrollTop + window.innerHeight;
+  let scrollTop = window.scrollY;
+  let scrollBtm = scrollTop + window.innerHeight;
 
   if (scrollTop == 0) {
     scrollFired = false;
@@ -16,16 +27,12 @@ window.addEventListener("scroll", (ev) => {
     return;
   }
 
-  var firstContentElm = document.getElementById("first-content");
-  var targetTop = firstContentElm.offsetTop;
-  var targetBtm = firstContentElm.offsetTop + firstContentElm.clientHeight;
+  let firstContentElm = document.getElementById("first-content");
+  let targetTop = firstContentElm.offsetTop;
+  let targetBtm = firstContentElm.offsetTop + firstContentElm.clientHeight;
 
   if (scrollBtm > targetTop && scrollTop < targetBtm) {
-    // in
-    window.scroll({
-      top: targetTop,
-      behavior: "smooth",
-    });
+    GoToFirstContent();
     scrollFired = true;
   } else {
     // not in
@@ -34,10 +41,5 @@ window.addEventListener("scroll", (ev) => {
 
 document.getElementById("scroll-btn").addEventListener("click", () => {
   scrollFired = true;
-  var firstContentElm = document.getElementById("first-content");
-  var targetTop = firstContentElm.offsetTop;
-  window.scroll({
-    top: targetTop,
-    behavior: "smooth",
-  });
+  GoToFirstContent();
 });
