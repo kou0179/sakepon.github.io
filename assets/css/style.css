@@ -177,4 +177,9 @@ footer {
   font-size: 1.5em;
   text-align: center;
   user-select: none;
+  padding: 0.5em 0;
+}
+
+footer > p {
+  margin: 0;
 }
