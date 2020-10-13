@@ -21,6 +21,7 @@ body {
   font-size: 1vh;
   font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ",
     "Meiryo", "verdana", sans-serif;
+    min-height: 100vh;
 }
 
 .flex {
